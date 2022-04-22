@@ -17,24 +17,26 @@ public class App
         SpiritBear spiritBear = loneDruid.summon();
         Golem golem = warlock.summon();
 
-//      //Sebelum SpiritBear dan Warlock Di Serang
-        System.out.println("Sebelum SpiritBear dan Golem Di Serang");
+//      //Sebelum SpiritBear dan Warlock Di Serang Creep 1
+        System.out.println("Sebelum SpiritBear dan Warlock Di Serang Creep 1");
         spiritBear.showCharacterInfo();
         System.out.println("\n");
         warlock.showCharacterInfo();
         System.out.println("\n");
 
         creep1.attack(spiritBear);
-        creep1.attack(golem);
+        creep1.attack(warlock);
 
-//        Setelah SpiritBear dan Warlock Di Serang
-        System.out.println("Setelah SpiritBear dan Golem Di Serang");
+//        Setelah SpiritBear dan Warlock Di Serang Creep 1
+        System.out.println("Setelah SpiritBear dan Warlock Di Serang Creep 1");
         spiritBear.showCharacterInfo();
+        System.out.println("\n");
         warlock.showCharacterInfo();
+        System.out.println("\n");
 
 
-//        Sebelum Creep1, Creep2, dan Creep3 di Serang
-        System.out.println("Sebelum Creep1, Creep2, dan Creep3 di Serang");
+//        Sebelum Creep1, Creep2, dan Creep3 di Serang oleh LoneDruid,SpiritBear,dan Warlock
+        System.out.println("Sebelum Creep1, Creep2, dan Creep3 di Serang oleh LoneDruid,SpiritBear,dan Warloc");
         creep1.showCharacterInfo();
         System.out.println("\n");
         creep2.showCharacterInfo();
@@ -42,26 +44,38 @@ public class App
         creep3.showCharacterInfo();
         System.out.println("\n");
 
-//        Setelah Creep1, Creep2, dan Creep3 Di Serang
-        System.out.println("Setelah Creep1, Creep2, dan Creep3 Di Serang");
         loneDruid.attack(creep1);
         spiritBear.attack(creep2);
         warlock.attack(creep3);
 
-//        Sebelum Creep1 dan Creep2 Di Serang
-        System.out.println("Sebelum Creep1 dan Creep2 Di Serang");
+//        Setelah Creep1, Creep2, dan Creep3 Di Serang oleh LoneDruid,SpiritBear,dan Warlock
+        System.out.println("Setelah Creep1, Creep2, dan Creep3 Di Serang oleh LoneDruid,SpiritBear,dan Warlock");
+        creep1.showCharacterInfo();
+        System.out.println("\n");
+        creep2.showCharacterInfo();
+        System.out.println("\n");
+        creep3.showCharacterInfo();
+        System.out.println("\n");
+
+//        Sebelum Creep1 dan Creep2 Di Serang oleh Golem
+        System.out.println("Sebelum Creep1 dan Creep2 Di Serang oleh Golem");
         creep1.showCharacterInfo();
         System.out.println("\n");
         creep2.showCharacterInfo();
         System.out.println("\n");
 
-//        Setelah Creep1 dan Creep2 Di Serang
-        System.out.println("Setelah Creep1 dan Creep2 Di Serang");
+//        Setelah Creep1 dan Creep2 Di Serang oleh Golem
+        System.out.println("Setelah Creep1 dan Creep2 Di Serang oleh Golem");
         golem.attack(creep1);
         golem.attack(creep2);
+        System.out.println("\n");
+        creep1.showCharacterInfo();
+        System.out.println("\n");
+        creep2.showCharacterInfo();
+        System.out.println("\n");
 
 //        summon minigolem
-        Golem minigolem = (Golem) golem.summon();
+        Golem minigolem = golem.summon();
 
         loneDruid.showCharacterInfo();
         System.out.println("\n");
@@ -69,7 +83,23 @@ public class App
         System.out.println("\n");
         minigolem.showCharacterInfo();
 
+        Creep creep4 = new Creep("creep4",20,10);
+        loneDruid.attack(creep4);
+        loneDruid.attack(creep4);
+        loneDruid.attack(creep4);
+        loneDruid.attack(creep4);
+        loneDruid.attack(creep4);
+
+        System.out.println("\n");
+        loneDruid.showCharacterInfo();
+        System.out.println("\n");
+        loneDruid.upgrade();
+        loneDruid.showCharacterInfo();
+
     }
+
+
 }
+
 
 
