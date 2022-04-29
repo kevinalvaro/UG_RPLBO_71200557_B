@@ -15,7 +15,7 @@ public class Melee extends Hero implements Skill{
     @Override
     public void attack(Character enemy) {
         if(enemy instanceof Creep){
-            this.setHealthBonus(this.getHealth()+200);
+            this.setHealthBonus(200);
             super.attack(enemy);
 
         }else {
