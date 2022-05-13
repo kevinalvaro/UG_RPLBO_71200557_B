@@ -98,6 +98,7 @@ public class App
             System.out.print("Bio\t: ");
             Bio = inp.nextLine();
 
+            //rencana regex untuk bio character spesial tp masih gk tau wkwk :D
             String regex = "^(.+)@(.+)$";
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(Bio);
@@ -108,21 +109,8 @@ public class App
                     throw new BioException(1);
                 } else if (Bio.length() >= 5 && Bio.length() <= 30) {
                     throw new BioException(2);
-                } else{
-                    boolean check = false;
-                    for(int i=0;i< Bio.length();i++){
-                        char c = Bio.charAt(i);
-                        if(c == ' ') {
-                        }
-                        else if(c == '_') {
-                        }
-                        else{
-                            check = true;
-                        }
-                    }
-                    if (check == true){
-                        throw new BioException(3);
-                    }
+                } else if (!isValidPattern) {
+                    throw new BioException(3);
                 }
                     valid = true;
 
