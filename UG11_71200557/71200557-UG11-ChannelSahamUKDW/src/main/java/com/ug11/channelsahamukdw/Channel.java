@@ -44,7 +44,6 @@ public class Channel {
         for(String i : kata){
             String at = String.valueOf(i.charAt(0));
             if(at.equals("#")){
-
                 tag += i+", ";
                 sahamSkrng += 1;
                 setTotalTag(getTotalTag()+1);
