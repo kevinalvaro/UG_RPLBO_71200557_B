@@ -33,7 +33,7 @@ public class Pelayanan extends DAO{
         System.out.print("Masukkan nama anda : ");
         String namaPengunjung = inpnama.nextLine();
 
-        Scanner usia = new Scanner(System.in);
+        Scanner usiaa = new Scanner(System.in);
         System.out.print("Masukkan usia anda : ");
         int usiaPengunjung= inpnama.nextInt();
 

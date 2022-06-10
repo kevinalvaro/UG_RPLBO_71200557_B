@@ -7,9 +7,8 @@ public class Suster {
 
     public Suster(String nama){
         this.nama = nama;
-        String url = "jdbc:sqlite:E:/File OneDrive/OneDrive - Duta Wacana Christian University/Materi Kuliah/Semester 4/PrRPLBO/UG15/KEvin/RumahSakit.db";
         try {
-            Connection conn = DriverManager.getConnection(url);
+            Connection conn = DriverManager.getConnection("jdbc:sqlite:E:/File OneDrive/OneDrive - Duta Wacana Christian University/Materi Kuliah/Semester 4/PrRPLBO/UG15/KEvin/RumahSakit.db");
             Statement statement = conn.createStatement();
             idSuster += 1;
             int rs = statement.executeUpdate("INSERT INTO suster values ('"+idSuster+"','"+nama+"')");
